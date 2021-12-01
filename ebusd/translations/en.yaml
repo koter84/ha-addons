@@ -1,10 +1,10 @@
 configuration:
-  device:
-    name: Device
+  device_usb:
+    name: USB Device
     description: -d, --device=DEV Use DEV as eBUS device ("enh:DEVICE" or "enh:IP:PORT" for enhanced device,"DEVICE" for serial device, or "[udp:]IP:PORT" for network device) [/dev/ttyUSB0]
-  port:
-    name: Port for TCP interface
-    description: -p, --port=PORT Listen for command line connections connections on PORT [8888]
+  device_custom:
+    name: Custom Device
+    description: -d, --device=DEV Use DEV as eBUS device ("enh:DEVICE" or "enh:IP:PORT" for enhanced device,"DEVICE" for serial device, or "[udp:]IP:PORT" for network device) [/dev/ttyUSB0]
   latency:
     name: Latency
     description: ebusd --latency=MSEC Transfer latency in ms [0 for USB, 10 for IP]
@@ -12,7 +12,7 @@ configuration:
     name: Read Only
     description: Only read from device, never write to it
   foreground:
-    name: foreground
+    name: Foreground
     description: show output in supervisor log (required to keep running ebusd)
   scanconfig:
     name: Scan Config
@@ -27,7 +27,7 @@ configuration:
     name: MQTT Host
     description: Connect to MQTT broker on HOST [localhost]
   mqttport:
-    name: MQTT serverPort
+    name: MQTT ServerPort
     description: Connect to MQTT broker on PORT (usually 1883), 0 to disable [0]
   mqttuser:
     name: MQTT User
